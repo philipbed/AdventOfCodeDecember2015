@@ -3,7 +3,7 @@ fileName = "dimensions.txt"
 def calcWrapperPaper( length,width,height ):
     dimensionLst = [length,width,height]
     largestDim = max( dimensionLst )
-    lst.remove( largestDim )
+    dimensionLst.remove( largestDim )
 
     surfaceArea = calcSurfaceArea( length,width,height )
 
