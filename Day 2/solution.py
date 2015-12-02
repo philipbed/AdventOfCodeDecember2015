@@ -39,12 +39,12 @@ def calcVolume(length,width,height):
     return length * width * height
 
 def calcRibbon(length,width,height):
-    lst = [length,width,height]
-    largestDim = max( lst )
-    lst.remove( largestDim )
+    dimesnionLst = [length,width,height]
+    largestDim = max( dimensionLst )
+    dimesnionLst.remove( largestDim )
 
-    smallestLength = lst[0]
-    smallestWidth = lst[1]
+    smallestLength = dimensionLst[0]
+    smallestWidth = dimensionLst[1]
     perim = perimeter( smallestLength, smallestWidth )
     volume = calcVolume( length,width,height )
 
