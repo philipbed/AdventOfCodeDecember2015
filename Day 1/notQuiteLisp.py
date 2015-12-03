@@ -1,15 +1,14 @@
 fileName = "floorMoves.txt"
 def findDifferece():
-    openParen = 0
-    closeParen = 0
-    with open(fileName) as f:
+    floor = 0
+    with open( fileName ) as f:
         for line in f:
             for ch in line:
                 if ch == "(":
-                    openParen += 1
+                    floor += 1
                 elif ch == ")":
-                    closeParen += 1
-        return abs(openParen - closeParen)
+                    floor += 1
+        return floor
 
 def findFloorNegOne():
     floor = 0
