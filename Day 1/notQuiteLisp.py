@@ -7,7 +7,7 @@ def findDifferece():
                 if ch == "(":
                     floor += 1
                 elif ch == ")":
-                    floor += 1
+                    floor -= 1
         return floor
 
 def findFloorNegOne():
