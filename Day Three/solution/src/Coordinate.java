@@ -29,9 +29,9 @@ public class Coordinate {
     }
 
     public int hashCode(){
-         int val = this.col + (2*this.row) +333;
+         //int val = this.col + (2*this.row) +333;
 
-        return (val %43)*21;
+        return this.col + (this.row*1000);
     }
 
     public String toString(){
