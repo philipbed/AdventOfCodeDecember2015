@@ -14,11 +14,12 @@ def howManyVowels(line):
             count +=1
     return count
             
-def isBad(line):
-    for val in badLst:
-        if val in line:
-            return True
-    return False
+##def isBad(line):
+##    for val in badLst:
+##        if val in line:
+##            return True
+##    return False
+
 
 def hasDouble(line):
     count =0
@@ -31,7 +32,9 @@ def part1():
     count = 0
     with open(fileName) as f:
         for line in f:
-            if  not isBad(line):
+##            if  not isBad(line):
+            lst = list( filter (lambda x: (x in line)== True, badLst))
+            if len(lst) == 0:
                 if howManyVowels(line) >= 3:
                     if hasDouble(line):
                         count += 1
@@ -70,4 +73,4 @@ def part2():
                     count += 1
         print(count)
 
-part2()
+part1()
